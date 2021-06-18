@@ -1,24 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class Filter extends React.Component {
-  render() {
-    return (
-      <>
-        <h3>Find contacts by name</h3>
-        <input
-          type="text"
-          name="filter"
-          value={this.props.value}
-          onChange={this.props.onChange}
-        />
-      </>
-    );
-  }
-}
+const Filter = ({ value, onChange }) => {
+  return (
+    <>
+      <h3>Find contacts by name</h3>
+      <input type="text" name="filter" value={value} onChange={onChange} />
+    </>
+  );
+};
 
 Filter.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

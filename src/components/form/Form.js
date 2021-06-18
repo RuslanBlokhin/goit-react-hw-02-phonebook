@@ -3,12 +3,12 @@ import style from "./Form";
 import PropsType from "prop-types";
 import shortid from "shortid";
 
-class Form extends React.Component {
-  initialState = {
-    name: "",
-    number: "",
-  };
+const initialState = {
+  name: "",
+  number: "",
+};
 
+class Form extends React.Component {
   state = {
     name: "",
     number: "",
@@ -36,7 +36,7 @@ class Form extends React.Component {
   };
 
   reset = () => {
-    this.setState(this.initialState);
+    this.setState(initialState);
   };
 
   render() {
